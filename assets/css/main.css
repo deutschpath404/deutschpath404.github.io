@@ -2543,6 +2543,11 @@ body.leave-modal-open { overflow: hidden; }
     bottom: calc(4.85rem + env(safe-area-inset-bottom));
   }
 
+  /* Home already has WhatsApp in the bottom bar — avoid a second FAB */
+  body.home-page .wa-float {
+    display: none;
+  }
+
   body.book-page .wa-float {
     bottom: max(1.15rem, env(safe-area-inset-bottom));
   }
