@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>German University Directory | DeutschPath</title>
+  <meta name="description" content="A future-ready directory for German universities and programs, with sample cards clearly marked until live data is connected.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta name="author" content="DeutschPath">
+  <link rel="canonical" href="https://deutschpath404.github.io/universities.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DeutschPath">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="German University Directory | DeutschPath">
+  <meta property="og:description" content="A future-ready directory for German universities and programs, with sample cards clearly marked until live data is connected.">
+  <meta property="og:url" content="https://deutschpath404.github.io/universities.html">
+  <meta property="og:image" content="https://deutschpath404.github.io/assets/og.png">
+  <meta property="og:image:alt" content="DeutschPath — Your Guided Path to Germany">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:image:alt" content="DeutschPath — Your Guided Path to Germany">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="German University Directory | DeutschPath">
+  <meta name="twitter:description" content="A future-ready directory for German universities and programs, with sample cards clearly marked until live data is connected.">
+  <meta name="twitter:image" content="https://deutschpath404.github.io/assets/og.png">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;family=Noto+Serif+Bengali:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script>document.documentElement.classList.add("js");</script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="DeutschPath home">
+        <img class="logo-img" src="assets/img/logo.png" alt="DeutschPath" width="680" height="508" decoding="async">
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="about.html">About</a><a href="services.html">Services</a><a href="bachelors.html">Bachelor’s</a><a href="masters.html">Master’s</a><a href="application-process.html">Process</a><a href="student-support.html">Support</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a class="nav-cta" href="book.html">Book Free Consultation</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary header-cta" href="book.html">Book consultation</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <header class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Universities</p>
+        <p class="eyebrow">Directory</p>
+        <h1>A directory ready for real programs.</h1>
+        <p class="lede">Filters and cards are built for live university data. Until that data is connected, the grid shows clearly marked samples so you can see the interface. None of these are programs you can apply to.</p>
+      </div>
+    </header>
+    <section class="section">
+      <div class="container">
+        <p class="mock-banner">Mock data. These cards are layout samples. They are not partnerships, offers, or official deadlines.</p>
+        <form class="filters" id="directory-filters">
+          <label class="field">Study level<select data-filter="level" aria-label="Study level"><option value="">All</option></select></label>
+          <label class="field">Field<select data-filter="field" aria-label="Field"><option value="">All</option></select></label>
+          <label class="field">University type<select data-filter="type" aria-label="University type"><option value="">All</option></select></label>
+          <label class="field">Language<select data-filter="language" aria-label="Language"><option value="">All</option></select></label>
+          <label class="field">Location<select data-filter="location" aria-label="Location"><option value="">All</option></select></label>
+          <label class="field">Application route<select data-filter="route" aria-label="Application route"><option value="">All</option></select></label>
+          <label class="field">VPD<select data-filter="vpd" aria-label="VPD"><option value="">All</option></select></label>
+          <label class="field">Deadline<select data-filter="deadlineKey" aria-label="Deadline"><option value="">All</option></select></label>
+          <div class="filter-actions">
+            <button class="btn btn-secondary" type="reset">Reset filters</button>
+          </div>
+        </form>
+        <p id="directory-count" aria-live="polite">Loading sample directory…</p>
+        <div id="directory-grid" class="uni-grid" aria-busy="true" aria-live="polite"></div>
+        <p id="directory-empty" class="state-message" hidden>No sample programs match these filters.</p>
+        <noscript><p class="notice">JavaScript is required to preview the sample directory. No live programs are listed yet.</p></noscript>
+        <p style="margin-top:1.5rem"><a class="btn btn-primary" href="book.html?topic=universities">Get My University Options</a></p>
+      </div>
+    </section>
+    <dialog class="program-dialog" id="program-dialog" aria-labelledby="program-dialog-title">
+      <button class="btn btn-secondary dialog-close" type="button" data-close-dialog>Close</button>
+      <div id="program-dialog-content"></div>
+    </dialog>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-compact">
+      <div class="footer-top">
+        <a class="logo" href="index.html" aria-label="DeutschPath home">
+          <img class="logo-img" src="assets/img/logo.png" alt="DeutschPath" width="680" height="508" loading="lazy" decoding="async">
+        </a>
+        <nav class="footer-inline" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="book.html">Book</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> DeutschPath · Germany only</p>
+        <p class="disclaimer">Independent consultancy. Admission and visa decisions belong to universities and authorities.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="mobile-bar">
+    <a class="mobile-contact" href="contact.html" data-whatsapp-link>Contact</a>
+    <a class="btn btn-primary btn-block" href="book.html">Book Free Consultation</a>
+  </div>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/directory.js"></script>
+</body>
+</html>
